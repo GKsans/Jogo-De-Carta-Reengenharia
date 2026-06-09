@@ -1,3 +1,15 @@
+export enum TipoCarta {
+  CRIATURA = 'Criatura',
+  MAGIA = 'Magia',
+  ARMADILHA = 'Armadilha'
+}
+
+export enum RaridadeCarta {
+  COMUM = 'Comum',
+  RARO = 'Raro',
+  EPICO = 'Épico',
+  LENDARIO = 'Lendário'
+}
 export interface Card {
   id: number;
   nome: string;
@@ -6,8 +18,8 @@ export interface Card {
   defesaAtual: number; // Nova propriedade para vida atual da carta
   custo: number;
   descricao: string;
-  tipo: 'Criatura' | 'Magia' | 'Armadilha';
-  raridade: 'Comum' | 'Raro' | 'Épico' | 'Lendário';
+  tipo: TipoCarta;
+  raridade: RaridadeCarta;
   jaAtacou?: boolean;
 }
 
